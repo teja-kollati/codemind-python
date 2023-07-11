@@ -1,13 +1,13 @@
-def findcount(List,n):
-    count = 0
+def count(List,n):
+    c = 0
     for i in List:
         if i == n:
-            count += 1
-    return count
+            c += 1
+    return c
 n = int(input())
 List = list(map(int,input().split()))
 l = []
 for i in List:
-    if findcount(List,i) == i and i not in l:
+    if count(List,i) == i:
         l.append(i)
-print(len(l))
+print(len(set(l)))
